@@ -6,7 +6,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.2.1'
+        classpath 'com.android.tools.build:gradle:8.2.2'
     }
 }
 
@@ -18,19 +18,21 @@ allprojects {
 }
 
 android {
+    namespace 'com.fr3ts0n.androbd.plugin'
+
     compileSdkVersion 30
     defaultConfig {
         minSdkVersion 15
         // SDK 25 to allow background service mechanism for plugins
         targetSdkVersion 25
-        versionCode 10100
-        versionName '1.1.0'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         lintOptions {
             // Override lint error on targetSdkVersion
             abortOnError false
         }
+        versionCode 1
+        versionName "1.0"
     }
 
     buildTypes {
